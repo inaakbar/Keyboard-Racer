@@ -1,0 +1,23 @@
+<%-include('partials/header.ejs')-%>
+
+<div class="d-flex align-items-center justify-content-center" style="height:100vh;">
+<p class="enterText"></p>
+<div class="card text-center" style="width: 60rem; max-height:80vh;">
+  <div class="card-header" style="background-color:#E3FDFD;">
+    Featured
+  </div>
+  <div class="card-body" style="height:auto;">
+    <div class="card-text" style="word-spacing:10px;font-size:1.5em;">
+      <span class="doneContent"> </span> <span class="wrongContent"></span> <span class="leftContent"><%=content%></span>
+    </div>
+  </div>
+  <div class="card-footer text-muted" style="background-color:#E3FDFD;">
+    <textarea class="tarea" name="name" rows="1" cols="120" style="resize:none;" autofocus></textarea>
+  </div>
+</div>
+
+</div>
+
+<script src="script/racescript.js" charset="utf-8"></script>
+
+<%-include('partials/footer.ejs')-%>

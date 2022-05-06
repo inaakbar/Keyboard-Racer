@@ -1,0 +1,35 @@
+<%-include('partials/header.ejs')-%>
+<div class="d-flex align-items-center justify-content-center" style=" height: 60vh; ">
+
+<table class="table-sm table-borderless" style="background-color:rgb(255,255,255);">
+  <tr>
+    <td >
+      <strong class="text-right">Username : </strong>
+    </td>
+      <td >
+        <%=info.username%>
+      </td>
+  </tr>
+  <tr>
+    <td ><strong>Words : </strong></td>
+    <td><%=info.words%></td>
+  </tr>
+  <tr>
+    <td><strong>Time Taken :</strong></td>
+    <td><%=info.timetaken%> <var>mins</var></td>
+  </tr>
+  <tr>
+    <td><strong>Speed : </strong></td>
+    <td><%=Math.round(info.words/info.timetaken)%> <var> WPM</var></td>
+  </tr>
+  <tr>
+    <td><strong>Average Speed : </strong></td>
+    <td><%=info.avgspeed%></td>
+  </tr>
+  <tr>
+    <td><strong>Total Races : </strong></td>
+    <td><%=info.race%></td>
+  </tr>
+</table>
+</div>
+<%-include('partials/footer.ejs')-%>

@@ -1,0 +1,90 @@
+<%-include('partials/header.ejs')-%>
+
+
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-5 d-flex align-items-center justify-content-center">
+      <div class="card text-white mb-3" style="max-width:30rem; background-color:#71C9CE;">
+        <div class="card-header text-center text-dark">
+          <h3>Leaderboard</h3>
+        </div>
+        <div class="card-body">
+          <table class="table table-lg">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Races</th>
+                <th scope="col">Speed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(let index=0;index<lead.length;index++){ %>
+              <% var person =lead[index]; %>
+
+              <tr>
+                <th scope="row"><%=index+1%></th>
+                <td><%=person.name%></td>
+                <td><%=person.username%></td>
+                <td><%=person.race%></td>
+                <td><%=person.speed%></td>
+              </tr>
+              <% } %>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="enterRace d-flex align-items-center justify-content-center">
+        <form action="/race" method="get">
+          <button class="btn btn-lg" style="background-color:#71C9CE;" type="Submit" name="button">Enter a Race</button>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="col-md-5 d-flex align-items-center justify-content-center">
+      <div class="row container">
+        <div class="card p-1 d-flex align-items-center justify-content-center" style="width:9rem; background-color:#E3FDFD;">
+          <img class="card-img-top m-1" src="images/user.png" alt="" style="width:6rem; height:6rem;">
+          <div class="card-footer p-1">
+            <h5 class="text-muted">Profile</h5>
+          </div>
+        </div>
+        <div class="card" style="width:18rem; background-color:#71C9CE; ">
+
+          <div class="col-md-4 pt-5" style="background-color:#71C9CE; height:40vh;">
+
+            <table class="table  table-borderless ">
+              <tr>
+                <td><strong>Name  </strong></td>
+                <td> <%=profile.name%></td>
+              </tr>
+              <tr>
+                <td><strong>Username  </strong></td>
+                <td> <%=profile.username%> </td>
+              </tr>
+              <tr>
+                <td><strong>Races </strong></td>
+                <td><%=profile.race%></td>
+              </tr>
+              <tr>
+                <td><strong>Speed </strong></td>
+                <td><%=profile.speed%></td>
+              </tr>
+            </table>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<%-include('partials/footer.ejs')-%>

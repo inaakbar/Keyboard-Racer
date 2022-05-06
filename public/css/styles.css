@@ -1,0 +1,30 @@
+.enterRace{
+  height:400px;
+}
+
+.doneContent{
+  margin:0;
+  padding:0;
+  background-color:green;
+}
+.wrongContent{
+  margin:0;
+  padding:0;
+  background-color:red;
+}
+.leftContent{
+  margin:0;
+  padding:0;
+}
+footer{
+  flex-shrink:0;
+}
+
+
+.page{
+  min-height:105vh;
+  height:auto;
+
+   background-image: linear-gradient(60deg,#E3FDFD,#71C9CE);
+   background-repeat: no-repeat;
+}

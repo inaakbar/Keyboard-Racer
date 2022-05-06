@@ -1,0 +1,36 @@
+<%-include('partials/header.ejs')-%>
+
+<div class="container p-5 d-flex align-items-center justify-content-center" >
+  <div class="card text-white mb-3" style="max-width:30rem; background-color:#71C9CE;">
+<div class="card-header text-center text-dark"> <h3>Leaderboard</h3></div>
+<div class="card-body">
+  <table class="table table-lg">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Races</th>
+        <th scope="col">Speed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let index=0;index<lead.length;index++){ %>
+        <% var person =lead[index]; %>
+
+        <tr>
+          <th scope="row"><%=index+1%></th>
+          <td><%=person.name%></td>
+          <td><%=person.username%></td>
+          <td><%=person.race%></td>
+          <td><%=person.speed%></td>
+        </tr>
+        <% } %>
+    </tbody>
+
+  </table>
+</div>
+</div>
+
+</div>
+<%-include('partials/footer.ejs')-%>
